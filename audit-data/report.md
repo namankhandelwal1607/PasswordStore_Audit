@@ -185,12 +185,6 @@ if (msg.sender != s_owner) {
 
 ## <a id='L-01'></a>L-01. Initialization Timeframe Vulnerability
 
-_Submitted by [dianivanov](/profile/clo3cuadr0017mp08rvq00v4e)._      
-                
-### Relevant GitHub Links
-    
-https://github.com/Cyfrin/2023-10-PasswordStore/blob/main/src/PasswordStore.sol
-
 ## Summary
 The PasswordStore contract exhibits an initialization timeframe vulnerability. This means that there is a period between contract deployment and the explicit call to setPassword during which the password remains in its default state. It's essential to note that even after addressing this issue, the password's public visibility on the blockchain cannot be entirely mitigated, as blockchain data is inherently public as already stated in the "Storing password in blockchain" vulnerability.
 
